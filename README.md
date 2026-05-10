@@ -12,7 +12,6 @@ Professional portfolio website focused on Data Engineering, Cloud Engineering, A
 ## Features
 
 - Responsive design
-- Dark/Light mode
 - Modern UI/UX
 - Professional portfolio sections
 - Project showcase
