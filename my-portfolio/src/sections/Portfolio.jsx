@@ -31,24 +31,34 @@ export default function PortfolioLandingPage() {
   ]
 
   const projects = [
-    {
-      title: 'Cloud Data Pipeline Platform',
-      description:
-        'Designed and orchestrated scalable ETL pipelines using Python, Airflow, cron jobs, and cloud services to automate data ingestion, transformation, and reporting workflows.',
-      stack: 'Python • Airflow • Azure • Databricks • SQL',
-    },
-    {
-      title: 'Analytics Dashboard Application',
-      description:
-        'Developed a responsive analytics dashboard focused on KPI visualization, business insights, and real-time reporting using React and modern frontend technologies.',
-      stack: 'React • JavaScript • APIs • Charts',
-    },
-    {
-      title: 'Full Stack Task Management App',
-      description:
-        'Built a full stack CRUD application with authentication, REST APIs, and database integration to manage tasks and workflow operations.',
-      stack: 'React • Node.js • MongoDB • Express',
-    },
+  {
+    title: 'Exploratory Data Analysis of Sales Data',
+    description:
+      'Performed an end-to-end exploratory data analysis on a retail sales dataset to uncover business insights, trends, and patterns. The project includes data cleaning, transformation, and visualization to support data-driven decision making.',
+    stack: 'Python • Pandas • Matplotlib • Seaborn',
+
+    github: 'https://github.com/KerenMoreno16/sales-eda-project',
+  },
+
+  {
+    title: 'Analytics Dashboard Application',
+    description:
+      'Developed a responsive analytics dashboard focused on KPI visualization, business insights, and real-time reporting using React and modern frontend technologies.',
+    stack: 'React • JavaScript • APIs • Charts',
+
+    liveDemo: 'https://datavision-app-vercel.vercel.app/',
+    github: 'https://github.com/KerenMoreno16/datavision-app',
+  },
+
+  {
+    title: 'Full Stack Task Management App',
+    description:
+      'Built a full stack CRUD application with authentication, REST APIs, and database integration to manage tasks and workflow operations.',
+    stack: 'React • Node.js • MongoDB • Express',
+
+    liveDemo: 'https://taskflow-fullstack-app-six.vercel.app/',
+    github: 'https://github.com/KerenMoreno16/taskflow-fullstack-app',
+  },
   ]
 
   return (
@@ -280,13 +290,25 @@ export default function PortfolioLandingPage() {
               </div>
 
               <div className="flex gap-4">
-                <button className="bg-cyan-400 text-black font-semibold px-5 py-3 rounded-xl hover:scale-105 transition">
-                  Live Demo
-                </button>
 
-                <button className="border border-white/10 px-5 py-3 rounded-xl hover:bg-white/10 transition">
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-cyan-400 text-black font-semibold px-5 py-3 rounded-xl hover:scale-105 transition"
+                >
+                  Live Demo
+                </a>
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-white/10 px-5 py-3 rounded-xl hover:bg-white/10 transition"
+                >
                   GitHub
-                </button>
+                </a>
+
               </div>
             </div>
           ))}
